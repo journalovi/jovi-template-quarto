@@ -1,9 +1,6 @@
 ---
 title: "JoVI article template"
 author: Matthew Kay
-format:
-  html:
-    self-contained: true
 bibliography: bibliography.bib
 ---
 
