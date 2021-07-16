@@ -1,0 +1,7 @@
+project:
+  title: "jovi-template-quarto"
+
+format:
+  html:
+    theme: lumen
+    toc: true
