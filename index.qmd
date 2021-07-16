@@ -7,7 +7,7 @@ format:
 bibliography: bibliography.bib
 ---
 
-## Abstract
+## Abstract {.unnumbered}
 
 All JoVI articles begin with a structured abstract. See **TODO** for guidance and a template for the abstract.
 

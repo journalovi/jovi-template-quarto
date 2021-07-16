@@ -5,3 +5,6 @@ format:
   html:
     theme: lumen
     toc: true
+
+number-sections: true
+number-depth: 2
