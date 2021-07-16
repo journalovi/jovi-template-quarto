@@ -52,6 +52,7 @@ approximately 97% of optimal."}
 You can also add captions and figure references using a `:::` block combined with an id prefixed with `#fig-`:
 
 ``` markdown
+:::
 ![](images/teaser.svg){fig.alt="Mean expected payoff / optimal payoff for 10 conditions,
 showing an increase over time in most conditions, with dot50 having the highest value of
 approximately 97% of optimal."}
