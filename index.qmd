@@ -1,5 +1,5 @@
 ---
-title: "JoVI Article Template"
+title: "JoVI article template"
 author: Matthew Kay
 format:
   html:
@@ -9,28 +9,37 @@ bibliography: bibliography.bib
 
 ## Abstract
 
-All JoVI articles begin with a structured abstract. See **TODO** for guidance and a
-template for the abstract.
+All JoVI articles begin with a structured abstract. See **TODO** for guidance and a template for the abstract.
 
 ## Setting up and writing a JoVI article
 
-JoVI articles are written in Quarto. This template outlines some of the features 
-that are most useful for writing academic articles in Quarto; for more visit <https://quarto.org>.
+JoVI articles are written in Quarto, which is a simple markdown-based text format. This template outlines some of the features that are most useful for writing academic articles in Quarto; for more visit <https://quarto.org>.
 
-To create a JoVI article, we recommend 
+You can find the source for this article in the [journalovi/jovi-template-quarto](https://github.com/journalovi/jovi-template-quarto) repository on Github. To create a new JoVI article, we recommend following these steps:
+
+1.  Install Quarto by following [these instructions](https://quarto.org/docs/getting-started/installation.html).
+
+2.  Create a new git repository to hold your article by [forking our template repository](https://github.com/journalovi/jovi-template-quarto).
+
+You can then edit `index.qmd` in your new repository to write your paper. There are several options for editing and rendering the paper:
+
+1.  You can execute `quarto serve` from the commandline to render the paper to `index.html` and preview it in the browser.
+
+2.  You can edit the paper in RStudio and render it by clicking on the *Render* button: ![](images/rstudio-render-button.png){style="max-width: 382.5px" fig.alt="Click Render in the Rstudio toolbar to render a Quarto document."}
+
+**If you plan to use RStudio,** read more about RStudio and Quarto [here](https://quarto.org/docs/computations/using-rstudio.html). In particular, you should install RStudio \> version 1.5, which as of this writing requires installing the [latest "daily" version of RStudio](https://dailies.rstudio.com/). If you do, you can also enable the visual editor:
+
+![](images/rstudio-visual-editor.png){style="max-width: 554.5px" fig.alt="Click the Settings button and then Use Visual Editor in the Rstudio toolbar to enable the visual editor."}
 
 ## Citations and footnotes
 
-Citations can be inserted using `[@simkin2002read]`; e.g. \[@simkin2002read\]. 
-Citations for this paper are kept in `bibliography.bib` in BibTeX format.[^1] 
-For more on footnotes and citations see [this Quarto documentation page](https://quarto.org/docs/authoring/footnotes-and-citations.html).
+Citations can be inserted using `[@simkin2002read]`; e.g. \[@simkin2002read\]. Citations for this paper are kept in `bibliography.bib` in BibTeX format.[^1] For more on footnotes and citations see [this Quarto documentation page](https://quarto.org/docs/authoring/footnotes-and-citations.html).
 
 [^1]: You can also insert footnotes!
 
 ## Figures and images
 
-Images can be included and for accessibility purposes **should always** have alt text. 
-Alt text of visualizations should provide meaningful descriptions of the visualization.
+Images can be included and for accessibility purposes **should always** have alt text. Alt text of visualizations should provide meaningful descriptions of the visualization.
 
 ``` markdown
 ![](images/teaser.svg){fig.alt="Mean expected payoff / optimal payoff for 10 conditions,
@@ -38,12 +47,9 @@ showing an increase over time in most conditions, with dot50 having the highest 
 approximately 97% of optimal."}
 ```
 
-![](images/teaser.svg){fig.alt="Mean expected payoff / optimal payoff for 10 conditions,
-showing an increase over time in most conditions, with dot50 having the highest value of
-approximately 97% of optimal."}
+![](images/teaser.svg){fig.alt="Mean expected payoff / optimal payoff for 10 conditions, showing an increase over time in most conditions, with dot50 having the highest value of approximately 97% of optimal."}
 
-You can also add captions and figure references using a `:::` block combined with
-an id prefixed with `#fig-`:
+You can also add captions and figure references using a `:::` block combined with an id prefixed with `#fig-`:
 
 ``` markdown
 ![](images/teaser.svg){fig.alt="Mean expected payoff / optimal payoff for 10 conditions,
@@ -55,22 +61,24 @@ Mean expected payoff / optimal payoff for 10 conditions.
 ```
 
 ::: {#fig-teaser}
-![](images/teaser.svg){fig.alt="Mean expected payoff / optimal payoff for 10 conditions,
-showing an increase over time in most conditions, with dot50 having the highest value of
-approximately 97% of optimal."}
+![](images/teaser.svg){fig.alt="Mean expected payoff / optimal payoff for 10 conditions, showing an increase over time in most conditions, with dot50 having the highest value of approximately 97% of optimal."}
 
 Mean expected payoff / optimal payoff for 10 conditions.
 :::
 
 Then you can refer to the above figure in text using `@fig-teaser`; for example:
 
-Refer to @fig-teaser. For the highest-quality output, we recommend using SVG
-figures if possible.
+Refer to @fig-teaser. For the highest-quality output, we recommend using SVG figures if possible.
 
-Quarto also supports more complex figure layouts and subfigures; see 
-[the Quarto page on figures](https://quarto.org/docs/authoring/figures-and-layout.html).
-For more on cross-references, see the
-[Quarto page on cross-references](https://quarto.org/docs/authoring/cross-references.html).
+Quarto also supports more complex figure layouts and subfigures; see [the Quarto page on figures](https://quarto.org/docs/authoring/figures-and-layout.html). For more on cross-references, see the [Quarto page on cross-references](https://quarto.org/docs/authoring/cross-references.html).
+
+## Code
+
+Quarto supports R and python code; for example:
+
+```{r}
+1 + 2
+```
 
 ## Equations
 
