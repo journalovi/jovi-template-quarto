@@ -4,11 +4,64 @@ author: Matthew Kay
 bibliography: bibliography.bib
 ---
 
+This template describes how to set up the [Quarto](https://quarto.org/)
+environment for writing a JoVI article, provides instructions and templates for
+content that must be included in every JoVI article (such as the structured
+abstract and authorship metadata), and gives brief examples of some useful
+functionality for writing papers (such as how to include figures and citations).
+
+If you have not setup [Quarto](https://quarto.org/) or the JoVI template yet,
+skip to the [Setup](#setup) section below.
+
 ## Abstract {.unnumbered}
 
-All JoVI articles begin with a structured abstract. See **TODO** for guidance and a template for the abstract.
+All JoVI articles begin with a structured abstract. Structured abstracts provide a succinct overview of an article using a prespecified set of sections. Which sections are used depends on the type of research and its goals. For example, articles with empirical methods must have a data collection section, while articles that do not analyze data to support a conclusion must not have the section. 
 
-## Setting up and writing a JoVI article
+Your paper may fall into multiple categories. Use the templates below to fill in **every** subsection that applies to your paper type(s), then delete these first two paragraphs and the subsections that do not apply to your paper type(s). See [structured abstract examples](/structured-abstract-examples.qmd) for examples.
+
+
+### For all article types {.unnumbered}
+
+#### Introduction
+The research question and a succinct motivation for answering it. 
+
+#### Conclusion
+An interpretation of results, lessons learned, etc. in the context of the research question and its implications. _Avoid overgeneralizing_, and _avoid broad behavioral claims without strong evidence._ 
+
+#### Materials
+Link to repositories containing raw data, open source code or (pre-)registration number/links.
+
+
+### For empirical research, reanalysis, or meta-analysis {.unnumbered}
+
+#### Data Collection or Source
+An overview of experiment and/or data collection procedures. Mention if the collection was prespecified (via preregistration) or exploratory. For reanalyses or meta-analyses, citations of the original sources are sufficient. This section does not apply to articles that only use datasets for demonstrations. 
+
+#### Data Analysis
+An overview of analysis approaches used as evidence for conclusions. This section does not apply to articles that only use datasets for demonstrations. 
+
+#### Analysis Results
+A summary of the analysis findings
+
+
+### For systems or techniques
+
+#### Implementation
+How was the application or system implemented? 
+
+#### Demonstration
+A description of any demonstrations or functionality that exemplify the utility
+of the system
+
+
+### For theories or models
+
+#### Theory/model
+A description of the theory or model, its key organizing principle, or
+new insights that might be gained from it
+
+
+## Setting up and writing a JoVI article {#setup}
 
 JoVI articles are written in Quarto, which is a simple markdown-based text format. This template outlines some of the features that are most useful for writing academic articles in Quarto; for more visit <https://quarto.org>.
 
@@ -22,11 +75,13 @@ You can then edit `index.qmd` in your new repository to write your paper. There 
 
 1.  You can execute `quarto serve` from the commandline to render the paper to `index.html` and preview it in the browser.
 
-2.  You can edit the paper in RStudio and render it by clicking on the *Render* button: ![](images/rstudio-render-button.png){style="max-width: 382.5px" fig.alt="Click Render in the Rstudio toolbar to render a Quarto document."}
+2.  You can edit the paper in RStudio and render it by clicking on the *Render* button: 
+
+    ![](images/rstudio-render-button.png){style="width: 382.5px" fig.alt="Click Render in the Rstudio toolbar to render a Quarto document."}
 
 **If you plan to use RStudio,** read more about RStudio and Quarto [here](https://quarto.org/docs/computations/using-rstudio.html). In particular, you should install RStudio \> version 1.5, which as of this writing requires installing the [latest "daily" version of RStudio](https://dailies.rstudio.com/). If you do, you can also enable the visual editor:
 
-![](images/rstudio-visual-editor.png){style="max-width: 554.5px" fig.alt="Click the Settings button and then Use Visual Editor in the Rstudio toolbar to enable the visual editor."}
+![](images/rstudio-visual-editor.png){style="width: 554.5px" fig.alt="Click the Settings button and then Use Visual Editor in the Rstudio toolbar to enable the visual editor."}
 
 ## Citations and footnotes
 
@@ -98,3 +153,8 @@ x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
 $$
 
 For more on equations, see [the corresponding section in the Quarto documentation]().
+
+## References {.unnumbered}
+
+::: {#refs}
+:::
