@@ -5,7 +5,7 @@ at JoVI.
 
 Papers for this track are written in [Quarto](https://quarto.org/) which is an open source publishing format that supports inline code, including languages like R, Python, Julia, and JavaScript (via Observable Notebook).
 
-To edit this template, edit [index.qmd](index.qmd). HTML output of the template is in [index.html](index.html) and can also be previewed online [here](https://htmlpreview.github.io/?https://github.com/journalovi/jovi-template-quarto/blob/main/index.html).
+To edit this template, edit [index.qmd](index.qmd). HTML output of the template is in [index.html](index.html) and can also be previewed online [here](https://www.journalovi.org/jovi-template-quarto/).
 Please commit the HTML version of your paper to your repostiory when you submit so that reviewers can easily preview the paper.
 
 We provide a few versions of the template:
