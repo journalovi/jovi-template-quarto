@@ -1,5 +1,5 @@
 ---
-title: "JoVI article template"
+title: "JoVI article template for the experimental track"
 author: 
   - name: Matthew Kay
     orcid: 0000-0001-9446-0419
