@@ -1,69 +1,106 @@
 ---
 title: "JoVI article template"
-author: Matthew Kay
+author: 
+  - name: Matthew Kay
+    orcid: 0000-0001-9446-0419
+    email: mjskay@northwestern.edu
+    affiliations:
+      - name: Northwestern University
+        city: Evanston
+        state: IL
+        country: USA
 bibliography: bibliography.bib
 ---
 
+This template is intended for the [experimental track](https://www.journalovi.org/submit.html#experimental) at JoVI.
+
 This template describes how to set up the [Quarto](https://quarto.org/)
 environment for writing a JoVI article, provides instructions and templates for
-content that must be included in every JoVI article (such as the structured
+content that should be included in every JoVI article (such as the structured
 abstract and authorship metadata), and gives brief examples of some useful
 functionality for writing papers (such as how to include figures and citations).
 
 If you have not setup [Quarto](https://quarto.org/) or the JoVI template yet,
 skip to the [Setup](#setup) section below.
 
+::: {.callout-note appearance="simple" icon=false collapse=false}
 ## Abstract {.unnumbered}
 
-All JoVI articles begin with a structured abstract. Structured abstracts provide a succinct overview of an article using a prespecified set of sections. Which sections are used depends on the type of research and its goals. For example, articles with empirical methods must have a data collection section, while articles that do not analyze data to support a conclusion must not have the section. 
+We highly recommend all JoVI articles use a structured abstract. Structured abstracts provide a succinct overview of an article using a common set of sections. Which sections are used depends on the type of research and its goals. For example, articles with empirical methods should have a data collection section, while articles that do not analyze data to support a conclusion do not need such a section.
 
-Your paper may fall into multiple categories. Use the templates below to fill in **every** subsection that applies to your paper type(s), then delete these first two paragraphs and the subsections that do not apply to your paper type(s). See [structured abstract examples](/structured-abstract-examples.qmd) for examples.
+Your paper may fall into multiple types of work. We provide some example sections you may want to include in your structured abstract below, depending on the type of work. You can use the example sections to fill in the subsections that apply to your paper, then delete these first two paragraphs and the subsections that do not apply to your paper. Please add, merge, rename, or re-order sections if you feel that would improve clarity. We have some (partial) examples of structured abstracts [here](https://www.journalovi.org/structured-abstract-examples.html).
 
-
-### For all article types {.unnumbered}
-
-#### Introduction
+###### Introduction
 The research question and a succinct motivation for answering it. 
 
-#### Conclusion
-An interpretation of results, lessons learned, etc. in the context of the research question and its implications. _Avoid overgeneralizing_, and _avoid broad behavioral claims without strong evidence._ 
+###### Theory/model
 
-#### Materials
-Link to repositories containing raw data, open source code or (pre-)registration number/links.
+*For theories or models*:
+A description of the theory or model, its key organizing principle, or
+new insights that might be gained from it
 
+###### Data Collection or Source
 
-### For empirical research, reanalysis, or meta-analysis {.unnumbered}
-
-#### Data Collection or Source
+*For empirical research, reanalysis, or meta-analysis*:
 An overview of experiment and/or data collection procedures. Mention if the collection was prespecified (via preregistration) or exploratory. For reanalyses or meta-analyses, citations of the original sources are sufficient. This section does not apply to articles that only use datasets for demonstrations. 
 
-#### Data Analysis
+###### Data Analysis
+
+*For empirical research, reanalysis, or meta-analysis*:
 An overview of analysis approaches used as evidence for conclusions. This section does not apply to articles that only use datasets for demonstrations. 
 
-#### Analysis Results
+###### Analysis Results
+
+*For empirical research, reanalysis, or meta-analysis*:
 A summary of the analysis findings
 
+###### Implementation
 
-### For systems or techniques
-
-#### Implementation
+*For systems or techniques*:
 How was the application or system implemented? 
 
-#### Demonstration
+###### Demonstration
+
+*For systems or techniques*:
 A description of any demonstrations or functionality that exemplify the utility
 of the system
 
+###### Conclusion
+An interpretation of results, lessons learned, etc. in the context of the research question and its implications. _Avoid overgeneralizing_, and _avoid broad behavioral claims without strong evidence._ 
 
-### For theories or models
+###### Materials
+Link to repositories containing raw data, open source code or (pre-)registration number/links.
 
-#### Theory/model
-A description of the theory or model, its key organizing principle, or
-new insights that might be gained from it
+:::
+
+
+::: {.callout-note appearance="simple" icon=false collapse=true}
+## Materials, Authorship, License, Conflicts
+
+Fill in the following sections in this infobox per the [JoVI Author Guide](https://www.journalovi.org/author-guide.html#sections), then delete this line.
+
+###### Research materials
+
+See [the corresponding section in the author guide](https://www.journalovi.org/author-guide.html#research-material-statements).
+
+###### Authorship
+
+See [the corresponding section in the author guide](https://www.journalovi.org/author-guide.html#authorship).
+
+###### License
+
+See [the corresponding section in the author guide](https://www.journalovi.org/author-guide.html#license).
+
+###### Conflicts of interest
+
+See [the corresponding section in the author guide](https://www.journalovi.org/author-guide.html#conflicts-of-interest).
+
+:::
 
 
 ## Setting up and writing a JoVI article {#setup}
 
-JoVI articles are written in Quarto, which is a simple markdown-based text format. This template outlines some of the features that are most useful for writing academic articles in Quarto; for more visit <https://quarto.org>.
+Articles on the JoVI experimental track are written in Quarto, which is a simple markdown-based text format. This template outlines some of the features that are most useful for writing academic articles in Quarto; for more visit <https://quarto.org>.
 
 You can find the source for this article in the [journalovi/jovi-template-quarto](https://github.com/journalovi/jovi-template-quarto) repository on Github. To create a new JoVI article, we recommend following these steps:
 
@@ -79,13 +116,15 @@ You can then edit `index.qmd` in your new repository to write your paper. There 
 
     ![](images/rstudio-render-button.png){style="width: 382.5px" fig.alt="Click Render in the Rstudio toolbar to render a Quarto document."}
 
-**If you plan to use RStudio,** read more about RStudio and Quarto [here](https://quarto.org/docs/computations/using-rstudio.html). In particular, you should install RStudio \> version 1.5, which as of this writing requires installing the [latest "daily" version of RStudio](https://dailies.rstudio.com/). If you do, you can also enable the visual editor:
+**If you plan to use RStudio,** read more about RStudio and Quarto [here](https://quarto.org/docs/computations/using-rstudio.html). In particular, you should install RStudio \> version 1.5. If you do, you can also enable the visual editor:
 
 ![](images/rstudio-visual-editor.png){style="width: 554.5px" fig.alt="Click the Settings button and then Use Visual Editor in the Rstudio toolbar to enable the visual editor."}
 
 ## Citations and footnotes
 
-Citations can be inserted using `[@simkin2002read]`; e.g. \[@simkin2002read\]. Citations for this paper are kept in `bibliography.bib` in BibTeX format. You can also insert footnotes.[^1] Note that some traditional uses of footnotes (e.g. to include URLs) are unnecessary in JoVI, as you can (and should) instead simply link directly to the URL you want to refer to with an [inline link](https://www.markdownguide.org/basic-syntax/#links).
+Citations can be inserted using `[@simkin2002read]`, which is rendered as: [@simkin2002read]. You can also format the citation just as the year with `[-@simkin2002read]`, though then we recommending including author names in the sentence; e.g. `Simkin and Roychowdhury [-@simkin2002read] said blah blah blah`: Simkin and Roychowdhury [-@simkin2002read] said blah blah blah. Citations for this paper are kept in `bibliography.bib` in BibTeX format. 
+
+You can also insert footnotes.[^1] Note that some traditional uses of footnotes (e.g. to include URLs) are unnecessary in JoVI, as you can (and should) instead simply link directly to the URL you want to refer to with an [inline link](https://www.markdownguide.org/basic-syntax/#links).
 
 [^1]: Like this one!
 
