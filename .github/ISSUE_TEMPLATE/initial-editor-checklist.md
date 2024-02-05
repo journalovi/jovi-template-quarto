@@ -26,7 +26,7 @@ assignees: ''
    ```
 - [ ] Set up github pages
    - [ ] Settings -> Actions -> General -> Allow journalovi, and select non-journalovi, actions. Enter: 
-      `actions/*,quarto-dev/*`
+      `actions/*,quarto-dev/*,s0/git-publish-subdir-action@develop`
       ![image](https://github.com/journalovi/2023-park-gatherplots/assets/6345019/05018b2f-f00e-4019-92de-cced0aab0d72)
    - [ ] clone the repo locally
    - [ ] run this command in the repo directory:
