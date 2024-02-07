@@ -17,6 +17,7 @@ assignees: ''
    - [ ] Authorship
    - [ ] License
    - [ ] Conflicts of Interest
+- [ ] All figures have alt texts that describe the content non-visually
 - [ ] Add a notice infobox at the top that the paper is under review w/ link to github issues above the abstract. In Quarto this looks like:
    ```
    ::: {.callout-important appearance="simple"}
