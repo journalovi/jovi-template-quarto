@@ -17,6 +17,7 @@ assignees: ''
    - [ ] Authorship
    - [ ] License
    - [ ] Conflicts of Interest
+- [ ] All figures have alt texts that describe the content non-visually
 - [ ] Add a notice infobox at the top that the paper is under review w/ link to github issues above the abstract. In Quarto this looks like:
    ```
    ::: {.callout-important appearance="simple"}
@@ -26,7 +27,7 @@ assignees: ''
    ```
 - [ ] Set up github pages
    - [ ] Settings -> Actions -> General -> Allow journalovi, and select non-journalovi, actions. Enter: 
-      `actions/*,quarto-dev/*,s0/git-publish-subdir-action@develop`
+      `actions/*,quarto-dev/*`
       ![image](https://github.com/journalovi/2023-park-gatherplots/assets/6345019/05018b2f-f00e-4019-92de-cced0aab0d72)
    - [ ] If using Quarto:
       - [ ] clone the repo locally
