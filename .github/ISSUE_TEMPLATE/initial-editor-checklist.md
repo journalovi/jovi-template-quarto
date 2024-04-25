@@ -16,7 +16,7 @@ assignees: ''
 -->
 
 - [ ] Article uses a format something similar to the template
-- [ ] Includes author names and affiliation
+- [ ] Includes author information
 - [ ] Includes abstract
 - [ ] Includes the required paper sections
    - [ ] Table of contents
